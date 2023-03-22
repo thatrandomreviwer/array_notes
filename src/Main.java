@@ -1,5 +1,8 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,5 +30,31 @@ public class Main {
         System.out.println(Arrays.toString(list));
         list[1].setAge(45);
         System.out.println(Arrays.toString(list));
+
+        //arrayList notes
+
+        ArrayList<Integer> ListOfNums= new ArrayList<>();
+        System.out.println(ListOfNums);
+        ListOfNums.add(27);
+        ListOfNums.add(32);
+        ListOfNums.add(-12);
+        ListOfNums.add(1,521);
+        ListOfNums.add(27);
+        ListOfNums.remove(3);
+        ListOfNums.remove(new Integer(27));
+        System.out.println(ListOfNums.contains(27));
+        System.out.println(ListOfNums);
+        System.out.println(ListOfNums.set(1,973));
+        System.out.println(ListOfNums.size());
+        Collections.sort(ListOfNums);
+        System.out.println(ListOfNums);
+        System.out.println(ListOfNums.get(2));
+        for (int i = 0; i < ListOfNums.size();i++){
+            ListOfNums.set(i, ListOfNums.get(i)+52);
+        }
+        for (int item:ListOfNums){
+            item += 52;
+        }
+        System.out.println(ListOfNums);
     }
 }
